@@ -1,0 +1,28 @@
+/* global.css */
+:root {
+    --primary-color: #006338;
+    --primary-color-light: rgba(0, 99, 56, 0.8);
+    --white-color: #ffffff;
+    --font-family: 'Arial', sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-family);
+    background-color: var(--white-color);
+    color: var(--primary-color);
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.hidden {
+    display: none;
+}

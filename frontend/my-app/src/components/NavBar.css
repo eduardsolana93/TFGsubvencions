@@ -1,0 +1,82 @@
+/* NavBar.css */
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: var(--primary-color);
+    padding: 10px 20px; /* Ajustat per tenir un padding més ampli */
+    overflow: hidden;
+    justify-content: space-between; /* Assegura que els elements es distribueixen correctament */
+    width: 100%; /* Assegura que la barra ocupa tot l'ample */
+    box-sizing: border-box; /* Inclou el padding dins de l'ample total */
+}
+
+    .navbar a, .navbar button {
+        color: var(--white-color);
+        margin: 0 1rem;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+        background: none; /* Assegura que el botó no tingui fons */
+        border: none; /* Elimina el contorn del botó */
+        cursor: pointer; /* Assegura que el cursor es veu com una mà */
+        font: inherit; /* Hereta la font del contenidor */
+    }
+
+        .navbar a:hover, .navbar button:hover {
+            background-color: var(--primary-color-light);
+        }
+
+    .navbar .brand {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+.navbar-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start; /* Alinea els elements a la dreta */
+    width: 100%;
+    flex-wrap: wrap; /* Permet que els elements es moguin a la següent línia si no hi ha prou espai */
+}
+
+.navbar-item {
+    margin: 0 5px;
+}
+
+    .navbar-item a,
+    .navbar-item button {
+        display: block;
+        color: var(--white-color); /* Assegura que el text sigui blanc */
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+        .navbar-item a:hover,
+        .navbar-item button:hover {
+            background-color: var(--primary-color-light); /* Mateix color de fons al passar el cursor */
+            color: black; /* Mateix color de text al passar el cursor */
+        }
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Col·loca els elements en columna en pantalles petites */
+        align-items: flex-start; /* Alinea els elements a l'esquerra */
+    }
+
+    .navbar-list {
+        width: 100%; /* Fa que la llista ocupi tot l'ample */
+        justify-content: flex-start; /* Alinea els elements a l'esquerra */
+    }
+
+    .navbar-item {
+        margin: 5px 0; /* Ajusta el marge per a pantalles petites */
+    }
+
+    .navbar a, .navbar button {
+        width: 100%; /* Fa que els enllaços i botons ocupin tot l'ample */
+        text-align: left; /* Alinea el text a l'esquerra */
+    }
+}
